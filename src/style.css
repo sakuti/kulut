@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: default;
+  user-select: none;
+}
+
+body {
+  height: 100svh;
+  font-family: -apple-system, system-ui, Arial, sans-serif;
+  padding: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  min-width: 128px;
+}
+
+td[data-value]:not([data-value="Saldo kulujen jälkeen"]):hover,
+[settings]>td:not(:has(input[type="file"])):hover {
+  outline: 1px solid #000000;
+  outline-offset: 0;
+  cursor: pointer;
+}
+
+tr>th:first-of-type,
+tr>td:first-of-type {
+  min-width: 196px;
+  cursor: default;
+}
+
+tr>th:first-of-type:hover,
+tr>td:first-of-type:hover {
+  background-color: inherit;
+}
+
+tr>td[data-negative="false"] {
+  color: #00a000;
+}
+
+tr>td[data-zero="true"] {
+  color: #00000050;
+}
+
+section {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+section>table {
+  width: fit-content;
+}
